@@ -60,4 +60,3 @@ async def get_movie_by_id(movie_id: int, db: AsyncSession = Depends(get_db)):
             status_code=404, detail="Movie with the given ID was not found."
         )
     return MovieDetailResponseSchema.model_validate(movie)
-
